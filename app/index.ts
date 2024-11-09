@@ -64,9 +64,9 @@ app.use(express.static('public'))
 app.get("*", (req, res, next) => {
   const title = "Cuber";
   const subtitle = "Find out more about Cuber app";
-  const image = "../public/images/cuber-web-image.webp";
+  const image = "../../public/images/cuber-web-image.webp";
 
-  const templatePath = path.join(__dirname, "../public/html/index.html");
+  const templatePath = path.join(__dirname, "../../public/html/index.html");
 
   var source = fs
     .readFileSync(templatePath, { encoding: "utf-8" })
