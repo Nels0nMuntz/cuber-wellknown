@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-itunes-app" content="app-id=myAppID, affiliate-data=myAffiliateData, app-argument=myURL">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="apple-mobile-web-app-title" content="My Awesome App">
+    <meta name="apple-mobile-web-app-title" content="My Awesome App">
+
+    <link rel="icon" type="image/png" href="...">
+    <link rel="mask-icon" href="" color="#ffffff">
+    <meta name="application-name" content="My Awesome App">
+
+    <title>{{title}}</title>
+    <meta name="description" content="{{subtitle}}" />
+    <meta property="og:title" content="{{title}}" />
+    <meta property="og:description" content="{{subtitle}}" />
+    <meta property="og:image" content="{{imageUrl}}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+
+    <meta name="twitter:card" content="summary_large_image"></meta>
+    <meta name="twitter:title" content="{{title}}"></meta>
+    <meta name="twitter:site" content="myawesomeapp.com"></meta>
+    <meta name="twitter:description" content="{{subtitle}}"></meta>
+    <meta name="twitter:image" content="{{imageUrl}}"></meta>
+
+    <link rel="apple-touch-icon" href="...">
+
+    <style>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        body {
+          font-family: Arial, sans-serif;
+          color: #e0e0e0;
+          background: url('../images/cuber-web-image.webp') no-repeat center center fixed;
+          background-size: cover;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          overflow: hidden;
+        }
+        .container {
+          text-align: center;
+          padding: 20px;
+          max-width: 400px;
+          background: rgba(0, 0, 0, 0.7);
+          border-radius: 12px;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+        .app-logo img {
+          width: 150px;
+          margin-bottom: 20px;
+        }
+        .intro-text {
+          font-size: 1.2em;
+          line-height: 1.6;
+          color: #cfcfcf;
+          margin-bottom: 20px;
+        }
+        .button-container {
+          margin-top: 20px;
+        }
+        .open-app-button {
+          display: inline-block;
+          padding: 12px 24px;
+          font-size: 1em;
+          color: #ffffff;
+          background-color: #4a90e2;
+          border: none;
+          border-radius: 6px;
+          cursor: pointer;
+          text-decoration: none;
+          transition: background-color 0.3s ease;
+          font-weight: bold;
+          letter-spacing: 1px;
+        }
+        .open-app-button:hover {
+          background-color: #357ABD;
+        }
+        .download-prompt {
+          font-size: 0.9em;
+          color: #888;
+          margin-top: 10px;
+        }
+      </style>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Detect.js/2.2.2/detect.min.js" rossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<body>
+    <div class="container">
+        <div class="app-logo">
+          <img src="../images/cuber-logo.png" alt="Cuber Logo">
+        </div>
+        <p class="intro-text">
+          Welcome to <strong>Cuber</strong> – your futuristic ride-sharing experience. Fast, safe, and at your fingertips.
+        </p>
+        <div class="button-container">
+          <a href="cuberapp://open" class="open-app-button">Open Cuber App</a>
+          <p class="download-prompt">Don't have the app? Download it from the App Store or Google Play.</p>
+        </div>
+      </div>
+</body>
+
+<script>
+  // Optional: redirect users on mobile platforms to the according store
+    var result = detect.parse(navigator.userAgent);
+    if (result.os.family === 'iOS') {
+        window.location.href = 'https://apps.apple.com/us/app/YOUR_APP_ID';
+    } else if (result.os.family.includes('Android')) {
+        window.location.href = 'https://play.google.com/store/apps/details?id=YOUR_APP_ID';
+    }
+  // You can handle any other logic here - Google Analytics, popups, etc...
+</script>
+</html>

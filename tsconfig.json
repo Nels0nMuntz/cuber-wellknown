@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es2021",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "removeComments": true,
+    "forceConsistentCasingInFileNames": true,
+  },
+  "include": ["app/**/*.ts", "server.ts"],
+  "exclude": ["node_modules"]
+}
