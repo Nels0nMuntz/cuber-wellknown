@@ -11,9 +11,7 @@ dotenv.config({
 const APPLE_TEAM_ID = "APPLE_TEAM_ID";
 const IOS_BUNDLE_ID = "com.eugenechekerdes.cuber";
 const ANDROID_PACKAGE_NAME = "com.eugene_chekerdes.cuber";
-const STATICS_PATH =
-  process.env.MODE === "production" ? "../../public/" : "../public/";
-
+const STATICS_PATH = "../../public/";
 
 
 const app = express();
@@ -65,7 +63,7 @@ app.get("/.well-known/assetlinks.json", (req, res) => {
   res.end();
 });
 
-app.get("/", (req, res, next) => {
+app.get("/signin", (req, res, next) => {
   const title = "Cuber";
   const subtitle = "Find out more about Cuber app";
   const image = `${STATICS_PATH}images/cuber-web-image.webp`;
